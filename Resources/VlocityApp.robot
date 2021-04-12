@@ -1,4 +1,6 @@
 *** Settings ***
+Documentation  This File holds high level keywords
+
 Resource    ../Resources/import.robot
 
 *** Keywords ***

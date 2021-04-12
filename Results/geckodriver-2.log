@@ -1,0 +1,13 @@
+1611499390037	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\zawar499\\AppData\\Local\\Temp\\rust_mozprofileQN7cjU"
+console.error: Enterprise Policies: 
+  Invalid parameters specified for Bookmarks.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1611499404461	Marionette	INFO	Listening on port 53694
+1611499404888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611499404960	Marionette	INFO	Stopped listening on port 53694
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
