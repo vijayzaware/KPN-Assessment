@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  New Contract Creation.
+Documentation  Error Validation
 
 Resource  ../Resources/import.robot
 
@@ -13,10 +13,13 @@ Test Teardown       End Web Test
 *** Keywords ***
 
 *** Test Cases ***
-TEST1_Successful Contract Creation
-  [Documentation]   This Test Creates New Contract and Verifies details of created contract.
+TEST2_Error Validation
+  [Documentation]  This Test attempts to verify Error Message While submitting Invalid Details in Contract Form.
     VlocityApp.Click On Renew Contract
     VlocityApp.Verify Create New Contract Page is Loaded
-    VlocityApp.Fill In Contract Details and submit form  ${CONTRACT_NAME}  ${CONTRACT_TERM1}  ${CONTRACT_STATUS1}
-    VlocityApp.Validate Contract Details  ${ACCOUNT_NAME}  ${CONTRACT_TERM1}  ${CONTRACT_STATUS1}
-    VlocityApp.Get Screenshot
+    VlocityApp.Fill In Contract Details and submit form  ${CONTRACT_NAME}  ${CONTRACT_TERM2}  ${CONTRACT_STATUS2}
+    VlocityApp.Verify Error Pop Up
+
+
+
+

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20210411 11:24:07.917" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
-<suite source="C:\Users\zawar499\PycharmProjects\Automation\Tests\ContractCreationValidation.robot" id="s1" name="ContractCreationValidation">
-<test id="s1-t1" name="TEST1_Successful Contract Creation">
-<kw type="setup" name="Begin Web Test" library="common">
+<robot rpa="false" generated="20210412 02:18:48.634" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="C:\Users\zawar499\PycharmProjects\Automation\Tests" id="s1" name="Tests">
+<suite source="C:\Users\zawar499\PycharmProjects\Automation\Tests\ContractCreationValidation.robot" id="s1-s1" name="ContractCreationValidation">
+<test id="s1-s1-t1" name="TEST1_Successful Contract Creation">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Begin Web Test</arg>
+<arg>AND</arg>
+<arg>Login To Salesforce</arg>
+<arg>${USER_CREDENTIALS}</arg>
+<arg>AND</arg>
+<arg>Navigate To Account</arg>
+</arguments>
+<kw name="Begin Web Test" library="common">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>-- Opening Browser ...</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:24:10.595" starttime="20210411 11:24:10.595"></status>
+<status status="PASS" endtime="20210412 02:18:49.164" starttime="20210412 02:18:49.163"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -16,23 +27,15 @@
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20210411 11:24:10.595" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com'.</msg>
-<status status="PASS" endtime="20210411 11:24:43.891" starttime="20210411 11:24:10.595"></status>
+<msg timestamp="20210412 02:18:49.164" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com'.</msg>
+<status status="PASS" endtime="20210412 02:19:34.173" starttime="20210412 02:18:49.164"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20210411 11:24:44.032" starttime="20210411 11:24:43.891"></status>
+<status status="PASS" endtime="20210412 02:19:34.447" starttime="20210412 02:19:34.173"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:24:44.032" starttime="20210411 11:24:10.595"></status>
+<status status="PASS" endtime="20210412 02:19:34.447" starttime="20210412 02:18:49.162"></status>
 </kw>
-<kw name="Contract Creation and Validation" library="VlocityApp">
-<arguments>
-<arg>${USER_CREDENTIALS}</arg>
-<arg>${ACCOUNT_NAME}</arg>
-<arg>${CONTRACT_NAME}</arg>
-<arg>${CONTRACT_TERM1}</arg>
-<arg>${CONTRACT_STATUS1}</arg>
-</arguments>
 <kw name="Login To Salesforce" library="VlocityApp">
 <arguments>
 <arg>${USER_CREDENTIALS}</arg>
@@ -47,8 +50,8 @@
 <arg>${USERID_INPUT_FIELD}</arg>
 <arg>${USER_CREDENTIALS.Email}</arg>
 </arguments>
-<msg timestamp="20210411 11:24:44.037" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field 'id=username'.</msg>
-<status status="PASS" endtime="20210411 11:24:44.481" starttime="20210411 11:24:44.037"></status>
+<msg timestamp="20210412 02:19:34.449" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field 'id=username'.</msg>
+<status status="PASS" endtime="20210412 02:19:35.927" starttime="20210412 02:19:34.448"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -56,10 +59,10 @@
 <arg>${PASSWORD_INPUT_FIELD}</arg>
 <arg>${USER_CREDENTIALS.Password}</arg>
 </arguments>
-<msg timestamp="20210411 11:24:44.482" level="INFO">Typing text 'Vlocity1234' into text field 'id=password'.</msg>
-<status status="PASS" endtime="20210411 11:24:45.092" starttime="20210411 11:24:44.481"></status>
+<msg timestamp="20210412 02:19:35.928" level="INFO">Typing text 'Vlocity1234' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20210412 02:19:38.474" starttime="20210412 02:19:35.927"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:24:45.092" starttime="20210411 11:24:44.036"></status>
+<status status="PASS" endtime="20210412 02:19:38.474" starttime="20210412 02:19:34.448"></status>
 </kw>
 <kw name="Click Submit" library="LoginPage">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -67,12 +70,12 @@
 <arguments>
 <arg>${SUBMIT_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:24:45.093" level="INFO">Clicking button 'id=Login'.</msg>
-<status status="PASS" endtime="20210411 11:25:29.550" starttime="20210411 11:24:45.093"></status>
+<msg timestamp="20210412 02:19:38.475" level="INFO">Clicking button 'id=Login'.</msg>
+<status status="PASS" endtime="20210412 02:20:30.032" starttime="20210412 02:19:38.475"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:29.550" starttime="20210411 11:24:45.092"></status>
+<status status="PASS" endtime="20210412 02:20:30.032" starttime="20210412 02:19:38.474"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:29.551" starttime="20210411 11:24:44.035"></status>
+<status status="PASS" endtime="20210412 02:20:30.032" starttime="20210412 02:19:34.447"></status>
 </kw>
 <kw name="Navigate To Account" library="VlocityApp">
 <kw name="Go To" library="SeleniumLibrary">
@@ -80,10 +83,12 @@
 <arguments>
 <arg>${ACCOUNT_URL}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:29.552" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
-<status status="PASS" endtime="20210411 11:25:32.635" starttime="20210411 11:25:29.552"></status>
+<msg timestamp="20210412 02:20:30.034" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" endtime="20210412 02:20:32.885" starttime="20210412 02:20:30.033"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:32.635" starttime="20210411 11:25:29.551"></status>
+<status status="PASS" endtime="20210412 02:20:32.885" starttime="20210412 02:20:30.033"></status>
+</kw>
+<status status="PASS" endtime="20210412 02:20:32.885" starttime="20210412 02:18:49.162"></status>
 </kw>
 <kw name="Click On Renew Contract" library="VlocityApp">
 <kw name="Renew Contract" library="AccountPage">
@@ -95,9 +100,9 @@
 <arg>John Smith</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:36.473" starttime="20210411 11:25:32.635"></status>
+<status status="PASS" endtime="20210412 02:20:36.618" starttime="20210412 02:20:32.928"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:36.473" starttime="20210411 11:25:32.635"></status>
+<status status="PASS" endtime="20210412 02:20:36.619" starttime="20210412 02:20:32.928"></status>
 </kw>
 <kw name="Click Renew Contract Link" library="AccountPage">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -106,15 +111,15 @@
 <arg>${IFRAME0}</arg>
 <arg>timeout=5s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:36.506" starttime="20210411 11:25:36.474"></status>
+<status status="PASS" endtime="20210412 02:20:36.653" starttime="20210412 02:20:36.619"></status>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>${IFRAME0}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:36.507" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer0"]'.</msg>
-<status status="PASS" endtime="20210411 11:25:45.511" starttime="20210411 11:25:36.506"></status>
+<msg timestamp="20210412 02:20:36.654" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer0"]'.</msg>
+<status status="PASS" endtime="20210412 02:20:46.958" starttime="20210412 02:20:36.654"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -122,39 +127,39 @@
 <arg>Renew Contract</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:50.269" starttime="20210411 11:25:45.511"></status>
+<status status="PASS" endtime="20210412 02:20:50.858" starttime="20210412 02:20:46.958"></status>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:50.300" starttime="20210411 11:25:50.269"></status>
+<status status="PASS" endtime="20210412 02:20:50.889" starttime="20210412 02:20:50.859"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:50.635" starttime="20210411 11:25:50.300"></status>
+<status status="PASS" endtime="20210412 02:20:51.275" starttime="20210412 02:20:50.890"></status>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <doc>Double clicks the element identified by ``locator``.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:50.635" level="INFO">Double clicking element 'xpath=//div[@class="slds-col--padded slds-size--1-of-2"][2]/div[2]/a'.</msg>
-<status status="PASS" endtime="20210411 11:25:50.968" starttime="20210411 11:25:50.635"></status>
+<msg timestamp="20210412 02:20:51.276" level="INFO">Double clicking element 'xpath=//div[@class="slds-col--padded slds-size--1-of-2"][2]/div[2]/a'.</msg>
+<status status="PASS" endtime="20210412 02:20:51.583" starttime="20210412 02:20:51.276"></status>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" endtime="20210411 11:25:50.990" starttime="20210411 11:25:50.968"></status>
+<status status="PASS" endtime="20210412 02:20:51.604" starttime="20210412 02:20:51.583"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:50.990" starttime="20210411 11:25:36.474"></status>
+<status status="PASS" endtime="20210412 02:20:51.604" starttime="20210412 02:20:36.619"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:50.990" starttime="20210411 11:25:32.635"></status>
+<status status="PASS" endtime="20210412 02:20:51.604" starttime="20210412 02:20:32.927"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:50.990" starttime="20210411 11:25:32.635"></status>
+<status status="PASS" endtime="20210412 02:20:51.604" starttime="20210412 02:20:32.927"></status>
 </kw>
 <kw name="Verify Create New Contract Page is Loaded" library="VlocityApp">
 <kw name="Page Load Confirmation" library="CreateNewContractPage">
@@ -164,15 +169,15 @@
 <arg>${IFRAME1}</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:51.739" starttime="20210411 11:25:50.992"></status>
+<status status="PASS" endtime="20210412 02:20:52.467" starttime="20210412 02:20:51.606"></status>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>${IFRAME1}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:51.740" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
-<status status="PASS" endtime="20210411 11:25:53.040" starttime="20210411 11:25:51.739"></status>
+<msg timestamp="20210412 02:20:52.469" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
+<status status="PASS" endtime="20210412 02:20:53.556" starttime="20210412 02:20:52.467"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -180,19 +185,19 @@
 <arg>Create New Contract</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.195" starttime="20210411 11:25:53.040"></status>
+<status status="PASS" endtime="20210412 02:20:56.117" starttime="20210412 02:20:53.556"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Create New Contract</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.291" level="INFO">Current page contains text 'Create New Contract'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.291" starttime="20210411 11:25:55.195"></status>
+<msg timestamp="20210412 02:20:56.458" level="INFO">Current page contains text 'Create New Contract'.</msg>
+<status status="PASS" endtime="20210412 02:20:56.458" starttime="20210412 02:20:56.117"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.291" starttime="20210411 11:25:50.991"></status>
+<status status="PASS" endtime="20210412 02:20:56.458" starttime="20210412 02:20:51.606"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.291" starttime="20210411 11:25:50.991"></status>
+<status status="PASS" endtime="20210412 02:20:56.459" starttime="20210412 02:20:51.605"></status>
 </kw>
 <kw name="Fill In Contract Details and submit form" library="VlocityApp">
 <arguments>
@@ -209,8 +214,8 @@
 <arguments>
 <arg>${IFRAME1}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.291" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.323" starttime="20210411 11:25:55.291"></status>
+<msg timestamp="20210412 02:20:56.463" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
+<status status="PASS" endtime="20210412 02:20:56.567" starttime="20210412 02:20:56.463"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -218,22 +223,22 @@
 <arg>${CONTRACT_NAME_INPUT}</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.338" starttime="20210411 11:25:55.323"></status>
+<status status="PASS" endtime="20210412 02:20:56.582" starttime="20210412 02:20:56.568"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${CONTRACT_NAME_INPUT}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.354" starttime="20210411 11:25:55.338"></status>
+<status status="PASS" endtime="20210412 02:20:56.687" starttime="20210412 02:20:56.582"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONTRACT_NAME_INPUT}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.354" level="INFO">Clicking element 'id=ContractName'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.511" starttime="20210411 11:25:55.354"></status>
+<msg timestamp="20210412 02:20:56.688" level="INFO">Clicking element 'id=ContractName'.</msg>
+<status status="PASS" endtime="20210412 02:20:56.920" starttime="20210412 02:20:56.688"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -241,10 +246,10 @@
 <arg>${CONTRACT_NAME_INPUT}</arg>
 <arg>${CONTRACT_NAME}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.512" level="INFO">Typing text 'Test Contract' into text field 'id=ContractName'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.664" starttime="20210411 11:25:55.511"></status>
+<msg timestamp="20210412 02:20:56.920" level="INFO">Typing text 'Test Contract' into text field 'id=ContractName'.</msg>
+<status status="PASS" endtime="20210412 02:20:57.161" starttime="20210412 02:20:56.920"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.664" starttime="20210411 11:25:55.291"></status>
+<status status="PASS" endtime="20210412 02:20:57.162" starttime="20210412 02:20:56.462"></status>
 </kw>
 <kw name="Select Term From Drop Down" library="CreateNewContractPage">
 <arguments>
@@ -255,14 +260,14 @@
 <arguments>
 <arg>//*[@id="SelectOption"]/option[3]</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.722" starttime="20210411 11:25:55.665"></status>
+<status status="PASS" endtime="20210412 02:20:57.209" starttime="20210412 02:20:57.162"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${CONTRACT_TERM_INPUT1}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.763" starttime="20210411 11:25:55.723"></status>
+<status status="PASS" endtime="20210412 02:20:57.241" starttime="20210412 02:20:57.209"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -280,12 +285,12 @@
 <arguments>
 <arg>${CONTRACT_TERM_INPUT1}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.765" level="INFO">Clicking element 'xpath=//div/select/option[text()="1 year"]'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.832" starttime="20210411 11:25:55.764"></status>
+<msg timestamp="20210412 02:20:57.243" level="INFO">Clicking element 'xpath=//div/select/option[text()="1 year"]'.</msg>
+<status status="PASS" endtime="20210412 02:20:57.338" starttime="20210412 02:20:57.242"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.832" starttime="20210411 11:25:55.763"></status>
+<status status="PASS" endtime="20210412 02:20:57.338" starttime="20210412 02:20:57.241"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.832" starttime="20210411 11:25:55.665"></status>
+<status status="PASS" endtime="20210412 02:20:57.338" starttime="20210412 02:20:57.162"></status>
 </kw>
 <kw name="Select Status" library="CreateNewContractPage">
 <arguments>
@@ -296,7 +301,7 @@
 <arguments>
 <arg>${CONTRACT_STATUS_INPUT1}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:55.874" starttime="20210411 11:25:55.833"></status>
+<status status="PASS" endtime="20210412 02:20:57.396" starttime="20210412 02:20:57.339"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -314,12 +319,12 @@
 <arguments>
 <arg>${CONTRACT_STATUS_INPUT1}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:55.876" level="INFO">Clicking element 'xpath=//input[@value='Draft']/..'.</msg>
-<status status="PASS" endtime="20210411 11:25:55.999" starttime="20210411 11:25:55.875"></status>
+<msg timestamp="20210412 02:20:57.397" level="INFO">Clicking element 'xpath=//input[@value='Draft']/..'.</msg>
+<status status="PASS" endtime="20210412 02:20:57.557" starttime="20210412 02:20:57.397"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.999" starttime="20210411 11:25:55.875"></status>
+<status status="PASS" endtime="20210412 02:20:57.557" starttime="20210412 02:20:57.396"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:55.999" starttime="20210411 11:25:55.833"></status>
+<status status="PASS" endtime="20210412 02:20:57.557" starttime="20210412 02:20:57.338"></status>
 </kw>
 <kw name="Click Done" library="CreateNewContractPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -328,33 +333,33 @@
 <arg>Done</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:56.030" starttime="20210411 11:25:56.001"></status>
+<status status="PASS" endtime="20210412 02:20:57.591" starttime="20210412 02:20:57.558"></status>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:56.082" starttime="20210411 11:25:56.031"></status>
+<status status="PASS" endtime="20210412 02:20:57.646" starttime="20210412 02:20:57.591"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:25:56.395" starttime="20210411 11:25:56.083"></status>
+<status status="PASS" endtime="20210412 02:20:58.002" starttime="20210412 02:20:57.647"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:25:56.395" level="INFO">Clicking element 'xpath=//div[@id="CreateNew_nextBtn"]'.</msg>
-<status status="PASS" endtime="20210411 11:25:56.537" starttime="20210411 11:25:56.395"></status>
+<msg timestamp="20210412 02:20:58.003" level="INFO">Clicking element 'xpath=//div[@id="CreateNew_nextBtn"]'.</msg>
+<status status="PASS" endtime="20210412 02:20:58.332" starttime="20210412 02:20:58.003"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:56.537" starttime="20210411 11:25:55.999"></status>
+<status status="PASS" endtime="20210412 02:20:58.332" starttime="20210412 02:20:57.557"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:25:56.537" starttime="20210411 11:25:55.291"></status>
+<status status="PASS" endtime="20210412 02:20:58.333" starttime="20210412 02:20:56.462"></status>
 </kw>
 <kw name="Validate Contract Details" library="VlocityApp">
 <arguments>
@@ -365,7 +370,7 @@
 <kw name="Get The Contract Number" library="ContractCreatedPage">
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" endtime="20210411 11:25:56.554" starttime="20210411 11:25:56.538"></status>
+<status status="PASS" endtime="20210412 02:20:58.395" starttime="20210412 02:20:58.368"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -373,7 +378,7 @@
 <arg>${CONTRACT_NUMBER_LOCATION}</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:03.319" starttime="20210411 11:25:56.554"></status>
+<status status="PASS" endtime="20210412 02:21:02.772" starttime="20210412 02:20:58.395"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -383,17 +388,17 @@
 <assign>
 <var>${ContractID}</var>
 </assign>
-<msg timestamp="20210411 11:26:03.370" level="INFO">${ContractID} = 00000393</msg>
-<status status="PASS" endtime="20210411 11:26:03.370" starttime="20210411 11:26:03.320"></status>
+<msg timestamp="20210412 02:21:03.684" level="INFO">${ContractID} = 00000396</msg>
+<status status="PASS" endtime="20210412 02:21:03.684" starttime="20210412 02:21:02.773"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${ContractID}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:03.371" starttime="20210411 11:26:03.370"></status>
+<status status="PASS" endtime="20210412 02:21:03.733" starttime="20210412 02:21:03.685"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:03.371" starttime="20210411 11:25:56.538"></status>
+<status status="PASS" endtime="20210412 02:21:03.733" starttime="20210412 02:20:58.368"></status>
 </kw>
 <kw name="Verify Account Name" library="ContractCreatedPage">
 <arguments>
@@ -405,10 +410,10 @@
 <arg>${ACCOUNT_NAME_LOCATION}</arg>
 <arg>${ACCOUNT_NAME}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:03.373" level="INFO">Verifying element 'xpath=//span[text()='Account Name']/../div//a' contains exact text 'John Smith'.</msg>
-<status status="PASS" endtime="20210411 11:26:03.691" starttime="20210411 11:26:03.372"></status>
+<msg timestamp="20210412 02:21:03.735" level="INFO">Verifying element 'xpath=//span[text()='Account Name']/../div//a' contains exact text 'John Smith'.</msg>
+<status status="PASS" endtime="20210412 02:21:04.105" starttime="20210412 02:21:03.734"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:03.692" starttime="20210411 11:26:03.372"></status>
+<status status="PASS" endtime="20210412 02:21:04.105" starttime="20210412 02:21:03.734"></status>
 </kw>
 <kw name="Verify Status" library="ContractCreatedPage">
 <arguments>
@@ -420,7 +425,7 @@
 <arg>${CONTRACT_STATUS_LOCATION}</arg>
 <arg>timeout=5s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:04.015" starttime="20210411 11:26:03.693"></status>
+<status status="PASS" endtime="20210412 02:21:04.368" starttime="20210412 02:21:04.106"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -428,8 +433,8 @@
 <arg>${CONTRACT_STATUS_LOCATION}</arg>
 <arg>${Status}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:04.016" level="INFO">Verifying element 'xpath=//span[text()='Status']/../div//span' contains exact text 'Draft'.</msg>
-<status status="PASS" endtime="20210411 11:26:04.048" starttime="20210411 11:26:04.015"></status>
+<msg timestamp="20210412 02:21:04.369" level="INFO">Verifying element 'xpath=//span[text()='Status']/../div//span' contains exact text 'Draft'.</msg>
+<status status="PASS" endtime="20210412 02:21:04.845" starttime="20210412 02:21:04.368"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -439,17 +444,17 @@
 <assign>
 <var>${ConStatus}</var>
 </assign>
-<msg timestamp="20210411 11:26:04.071" level="INFO">${ConStatus} = Draft</msg>
-<status status="PASS" endtime="20210411 11:26:04.072" starttime="20210411 11:26:04.048"></status>
+<msg timestamp="20210412 02:21:05.029" level="INFO">${ConStatus} = Draft</msg>
+<status status="PASS" endtime="20210412 02:21:05.029" starttime="20210412 02:21:04.845"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${ConStatus}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:04.073" starttime="20210411 11:26:04.072"></status>
+<status status="PASS" endtime="20210412 02:21:05.065" starttime="20210412 02:21:05.029"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.073" starttime="20210411 11:26:03.692"></status>
+<status status="PASS" endtime="20210412 02:21:05.065" starttime="20210412 02:21:04.105"></status>
 </kw>
 <kw name="Verify Contract Term" library="ContractCreatedPage">
 <arguments>
@@ -461,7 +466,7 @@
 <arg>${CONTRACT_TERM_LOCATION}</arg>
 <arg>timeout=5s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:04.090" starttime="20210411 11:26:04.074"></status>
+<status status="PASS" endtime="20210412 02:21:05.227" starttime="20210412 02:21:05.066"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -471,15 +476,15 @@
 <assign>
 <var>${ContractTerm}</var>
 </assign>
-<msg timestamp="20210411 11:26:04.147" level="INFO">${ContractTerm} = 12</msg>
-<status status="PASS" endtime="20210411 11:26:04.147" starttime="20210411 11:26:04.090"></status>
+<msg timestamp="20210412 02:21:05.524" level="INFO">${ContractTerm} = 12</msg>
+<status status="PASS" endtime="20210412 02:21:05.524" starttime="20210412 02:21:05.228"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${ContractTerm}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:04.149" starttime="20210411 11:26:04.148"></status>
+<status status="PASS" endtime="20210412 02:21:05.559" starttime="20210412 02:21:05.525"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -500,14 +505,14 @@
 <arg>${CONTRACT_TERM_LOCATION}</arg>
 <arg>12</arg>
 </arguments>
-<msg timestamp="20210411 11:26:04.151" level="INFO">Verifying element 'xpath=//span[text()='Contract Term (months)']/../div//span' contains exact text '12'.</msg>
-<status status="PASS" endtime="20210411 11:26:04.233" starttime="20210411 11:26:04.151"></status>
+<msg timestamp="20210412 02:21:05.561" level="INFO">Verifying element 'xpath=//span[text()='Contract Term (months)']/../div//span' contains exact text '12'.</msg>
+<status status="PASS" endtime="20210412 02:21:06.103" starttime="20210412 02:21:05.561"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.233" starttime="20210411 11:26:04.149"></status>
+<status status="PASS" endtime="20210412 02:21:06.103" starttime="20210412 02:21:05.560"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.233" starttime="20210411 11:26:04.073"></status>
+<status status="PASS" endtime="20210412 02:21:06.103" starttime="20210412 02:21:05.066"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.233" starttime="20210411 11:25:56.537"></status>
+<status status="PASS" endtime="20210412 02:21:06.103" starttime="20210412 02:20:58.367"></status>
 </kw>
 <kw name="Get Screenshot" library="VlocityApp">
 <kw name="Take Screenhot" library="ContractCreatedPage">
@@ -516,14 +521,12 @@
 <arguments>
 <arg>selenium-screenshot-{index}.png</arg>
 </arguments>
-<msg timestamp="20210411 11:26:04.608" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20210411 11:26:04.608" starttime="20210411 11:26:04.235"></status>
+<msg timestamp="20210412 02:21:06.713" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210412 02:21:06.713" starttime="20210412 02:21:06.259"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.608" starttime="20210411 11:26:04.234"></status>
+<status status="PASS" endtime="20210412 02:21:06.714" starttime="20210412 02:21:06.259"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:04.608" starttime="20210411 11:26:04.234"></status>
-</kw>
-<status status="PASS" endtime="20210411 11:26:04.609" starttime="20210411 11:24:44.034"></status>
+<status status="PASS" endtime="20210412 02:21:06.714" starttime="20210412 02:21:06.258"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="common">
 <kw name="Log To Console" library="BuiltIn">
@@ -531,25 +534,39 @@
 <arguments>
 <arg>-- Closing Browser ...</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:04.611" starttime="20210411 11:26:04.610"></status>
+<status status="PASS" endtime="20210412 02:21:06.724" starttime="20210412 02:21:06.724"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20210411 11:26:09.324" starttime="20210411 11:26:04.611"></status>
+<status status="PASS" endtime="20210412 02:21:19.608" starttime="20210412 02:21:06.725"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:09.324" starttime="20210411 11:26:04.610"></status>
+<status status="PASS" endtime="20210412 02:21:19.608" starttime="20210412 02:21:06.723"></status>
 </kw>
 <doc>This Test Creates New Contract and Verifies details of created contract.</doc>
-<status status="PASS" endtime="20210411 11:26:09.324" critical="yes" starttime="20210411 11:24:10.595"></status>
+<status status="PASS" endtime="20210412 02:21:19.620" critical="yes" starttime="20210412 02:18:49.160"></status>
 </test>
-<test id="s1-t2" name="TEST2_Error Validation">
-<kw type="setup" name="Begin Web Test" library="common">
+<doc>New Contract Creation.</doc>
+<status status="PASS" endtime="20210412 02:21:20.234" starttime="20210412 02:18:48.685"></status>
+</suite>
+<suite source="C:\Users\zawar499\PycharmProjects\Automation\Tests\ErrorValidation.robot" id="s1-s2" name="ErrorValidation">
+<test id="s1-s2-t1" name="TEST2_Error Validation">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Begin Web Test</arg>
+<arg>AND</arg>
+<arg>Login To Salesforce</arg>
+<arg>${USER_CREDENTIALS}</arg>
+<arg>AND</arg>
+<arg>Navigate To Account</arg>
+</arguments>
+<kw name="Begin Web Test" library="common">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>-- Opening Browser ...</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:26:09.340" starttime="20210411 11:26:09.340"></status>
+<status status="PASS" endtime="20210412 02:21:20.280" starttime="20210412 02:21:20.277"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -557,23 +574,15 @@
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:09.340" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com'.</msg>
-<status status="PASS" endtime="20210411 11:26:39.378" starttime="20210411 11:26:09.340"></status>
+<msg timestamp="20210412 02:21:20.280" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com'.</msg>
+<status status="PASS" endtime="20210412 02:21:59.929" starttime="20210412 02:21:20.280"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20210411 11:26:39.620" starttime="20210411 11:26:39.379"></status>
+<status status="PASS" endtime="20210412 02:22:00.590" starttime="20210412 02:21:59.930"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:39.623" starttime="20210411 11:26:09.340"></status>
+<status status="PASS" endtime="20210412 02:22:00.590" starttime="20210412 02:21:20.272"></status>
 </kw>
-<kw name="Error Validation On Selecting Invalid Details" library="VlocityApp">
-<arguments>
-<arg>${USER_CREDENTIALS}</arg>
-<arg>${ACCOUNT_NAME}</arg>
-<arg>${CONTRACT_NAME}</arg>
-<arg>${CONTRACT_TERM2}</arg>
-<arg>${CONTRACT_STATUS2}</arg>
-</arguments>
 <kw name="Login To Salesforce" library="VlocityApp">
 <arguments>
 <arg>${USER_CREDENTIALS}</arg>
@@ -588,8 +597,8 @@
 <arg>${USERID_INPUT_FIELD}</arg>
 <arg>${USER_CREDENTIALS.Email}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:39.667" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field 'id=username'.</msg>
-<status status="PASS" endtime="20210411 11:26:40.428" starttime="20210411 11:26:39.666"></status>
+<msg timestamp="20210412 02:22:00.593" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field 'id=username'.</msg>
+<status status="PASS" endtime="20210412 02:22:01.817" starttime="20210412 02:22:00.592"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -597,10 +606,10 @@
 <arg>${PASSWORD_INPUT_FIELD}</arg>
 <arg>${USER_CREDENTIALS.Password}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:40.429" level="INFO">Typing text 'Vlocity1234' into text field 'id=password'.</msg>
-<status status="PASS" endtime="20210411 11:26:42.216" starttime="20210411 11:26:40.429"></status>
+<msg timestamp="20210412 02:22:01.818" level="INFO">Typing text 'Vlocity1234' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20210412 02:22:05.230" starttime="20210412 02:22:01.817"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:26:42.216" starttime="20210411 11:26:39.666"></status>
+<status status="PASS" endtime="20210412 02:22:05.230" starttime="20210412 02:22:00.592"></status>
 </kw>
 <kw name="Click Submit" library="LoginPage">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -608,12 +617,12 @@
 <arguments>
 <arg>${SUBMIT_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:26:42.217" level="INFO">Clicking button 'id=Login'.</msg>
-<status status="PASS" endtime="20210411 11:27:27.267" starttime="20210411 11:26:42.217"></status>
+<msg timestamp="20210412 02:22:05.232" level="INFO">Clicking button 'id=Login'.</msg>
+<status status="PASS" endtime="20210412 02:22:54.388" starttime="20210412 02:22:05.231"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:27.268" starttime="20210411 11:26:42.216"></status>
+<status status="PASS" endtime="20210412 02:22:54.389" starttime="20210412 02:22:05.231"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:27.268" starttime="20210411 11:26:39.665"></status>
+<status status="PASS" endtime="20210412 02:22:54.389" starttime="20210412 02:22:00.591"></status>
 </kw>
 <kw name="Navigate To Account" library="VlocityApp">
 <kw name="Go To" library="SeleniumLibrary">
@@ -621,10 +630,12 @@
 <arguments>
 <arg>${ACCOUNT_URL}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:27.270" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
-<status status="PASS" endtime="20210411 11:27:29.612" starttime="20210411 11:27:27.269"></status>
+<msg timestamp="20210412 02:22:54.390" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" endtime="20210412 02:22:58.098" starttime="20210412 02:22:54.390"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:29.613" starttime="20210411 11:27:27.268"></status>
+<status status="PASS" endtime="20210412 02:22:58.098" starttime="20210412 02:22:54.389"></status>
+</kw>
+<status status="PASS" endtime="20210412 02:22:58.098" starttime="20210412 02:21:20.272"></status>
 </kw>
 <kw name="Click On Renew Contract" library="VlocityApp">
 <kw name="Renew Contract" library="AccountPage">
@@ -636,9 +647,9 @@
 <arg>John Smith</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:33.200" starttime="20210411 11:27:29.614"></status>
+<status status="PASS" endtime="20210412 02:23:04.192" starttime="20210412 02:22:58.191"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:33.200" starttime="20210411 11:27:29.614"></status>
+<status status="PASS" endtime="20210412 02:23:04.192" starttime="20210412 02:22:58.190"></status>
 </kw>
 <kw name="Click Renew Contract Link" library="AccountPage">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -647,15 +658,15 @@
 <arg>${IFRAME0}</arg>
 <arg>timeout=5s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:33.237" starttime="20210411 11:27:33.201"></status>
+<status status="PASS" endtime="20210412 02:23:04.564" starttime="20210412 02:23:04.193"></status>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>${IFRAME0}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:33.238" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer0"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:40.976" starttime="20210411 11:27:33.237"></status>
+<msg timestamp="20210412 02:23:04.565" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer0"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:13.946" starttime="20210412 02:23:04.564"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -663,39 +674,39 @@
 <arg>Renew Contract</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:44.500" starttime="20210411 11:27:40.977"></status>
+<status status="PASS" endtime="20210412 02:23:17.813" starttime="20210412 02:23:13.946"></status>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:44.533" starttime="20210411 11:27:44.501"></status>
+<status status="PASS" endtime="20210412 02:23:17.865" starttime="20210412 02:23:17.813"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:44.869" starttime="20210411 11:27:44.534"></status>
+<status status="PASS" endtime="20210412 02:23:18.259" starttime="20210412 02:23:17.865"></status>
 </kw>
 <kw name="Double Click Element" library="SeleniumLibrary">
 <doc>Double clicks the element identified by ``locator``.</doc>
 <arguments>
 <arg>${RENEW_CONTRACT_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:44.869" level="INFO">Double clicking element 'xpath=//div[@class="slds-col--padded slds-size--1-of-2"][2]/div[2]/a'.</msg>
-<status status="PASS" endtime="20210411 11:27:45.179" starttime="20210411 11:27:44.869"></status>
+<msg timestamp="20210412 02:23:18.260" level="INFO">Double clicking element 'xpath=//div[@class="slds-col--padded slds-size--1-of-2"][2]/div[2]/a'.</msg>
+<status status="PASS" endtime="20210412 02:23:18.753" starttime="20210412 02:23:18.260"></status>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" endtime="20210411 11:27:45.182" starttime="20210411 11:27:45.179"></status>
+<status status="PASS" endtime="20210412 02:23:18.756" starttime="20210412 02:23:18.753"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:45.182" starttime="20210411 11:27:33.201"></status>
+<status status="PASS" endtime="20210412 02:23:18.756" starttime="20210412 02:23:04.192"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:45.182" starttime="20210411 11:27:29.613"></status>
+<status status="PASS" endtime="20210412 02:23:18.756" starttime="20210412 02:22:58.190"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:45.182" starttime="20210411 11:27:29.613"></status>
+<status status="PASS" endtime="20210412 02:23:18.756" starttime="20210412 02:22:58.189"></status>
 </kw>
 <kw name="Verify Create New Contract Page is Loaded" library="VlocityApp">
 <kw name="Page Load Confirmation" library="CreateNewContractPage">
@@ -705,15 +716,15 @@
 <arg>${IFRAME1}</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:45.942" starttime="20210411 11:27:45.184"></status>
+<status status="PASS" endtime="20210412 02:23:20.489" starttime="20210412 02:23:18.794"></status>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>${IFRAME1}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:45.943" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:46.877" starttime="20210411 11:27:45.942"></status>
+<msg timestamp="20210412 02:23:20.490" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:22.261" starttime="20210412 02:23:20.489"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -721,19 +732,19 @@
 <arg>Create New Contract</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:48.527" starttime="20210411 11:27:46.877"></status>
+<status status="PASS" endtime="20210412 02:23:23.900" starttime="20210412 02:23:22.261"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Create New Contract</arg>
 </arguments>
-<msg timestamp="20210411 11:27:48.686" level="INFO">Current page contains text 'Create New Contract'.</msg>
-<status status="PASS" endtime="20210411 11:27:48.686" starttime="20210411 11:27:48.527"></status>
+<msg timestamp="20210412 02:23:24.009" level="INFO">Current page contains text 'Create New Contract'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.009" starttime="20210412 02:23:23.900"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:48.686" starttime="20210411 11:27:45.183"></status>
+<status status="PASS" endtime="20210412 02:23:24.009" starttime="20210412 02:23:18.794"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:48.686" starttime="20210411 11:27:45.183"></status>
+<status status="PASS" endtime="20210412 02:23:24.009" starttime="20210412 02:23:18.793"></status>
 </kw>
 <kw name="Fill In Contract Details and submit form" library="VlocityApp">
 <arguments>
@@ -750,8 +761,8 @@
 <arguments>
 <arg>${IFRAME1}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:48.686" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:48.701" starttime="20210411 11:27:48.686"></status>
+<msg timestamp="20210412 02:23:24.015" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.038" starttime="20210412 02:23:24.015"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -759,22 +770,22 @@
 <arg>${CONTRACT_NAME_INPUT}</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:48.717" starttime="20210411 11:27:48.701"></status>
+<status status="PASS" endtime="20210412 02:23:24.052" starttime="20210412 02:23:24.039"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${CONTRACT_NAME_INPUT}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:48.764" starttime="20210411 11:27:48.717"></status>
+<status status="PASS" endtime="20210412 02:23:24.079" starttime="20210412 02:23:24.052"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${CONTRACT_NAME_INPUT}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:48.764" level="INFO">Clicking element 'id=ContractName'.</msg>
-<status status="PASS" endtime="20210411 11:27:49.006" starttime="20210411 11:27:48.764"></status>
+<msg timestamp="20210412 02:23:24.080" level="INFO">Clicking element 'id=ContractName'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.234" starttime="20210412 02:23:24.079"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -782,10 +793,10 @@
 <arg>${CONTRACT_NAME_INPUT}</arg>
 <arg>${CONTRACT_NAME}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:49.008" level="INFO">Typing text 'Test Contract' into text field 'id=ContractName'.</msg>
-<status status="PASS" endtime="20210411 11:27:49.238" starttime="20210411 11:27:49.007"></status>
+<msg timestamp="20210412 02:23:24.235" level="INFO">Typing text 'Test Contract' into text field 'id=ContractName'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.443" starttime="20210412 02:23:24.234"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:49.238" starttime="20210411 11:27:48.686"></status>
+<status status="PASS" endtime="20210412 02:23:24.443" starttime="20210412 02:23:24.014"></status>
 </kw>
 <kw name="Select Term From Drop Down" library="CreateNewContractPage">
 <arguments>
@@ -796,14 +807,14 @@
 <arguments>
 <arg>//*[@id="SelectOption"]/option[3]</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:49.291" starttime="20210411 11:27:49.239"></status>
+<status status="PASS" endtime="20210412 02:23:24.523" starttime="20210412 02:23:24.444"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
 <arguments>
 <arg>${CONTRACT_TERM_INPUT1}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:49.386" starttime="20210411 11:27:49.291"></status>
+<status status="PASS" endtime="20210412 02:23:24.558" starttime="20210412 02:23:24.523"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -821,12 +832,12 @@
 <arguments>
 <arg>${CONTRACT_TERM_INPUT2}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:49.388" level="INFO">Clicking element 'xpath=//div/select/option[text()="2 years"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:49.473" starttime="20210411 11:27:49.387"></status>
+<msg timestamp="20210412 02:23:24.560" level="INFO">Clicking element 'xpath=//div/select/option[text()="2 years"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.648" starttime="20210412 02:23:24.559"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:49.473" starttime="20210411 11:27:49.386"></status>
+<status status="PASS" endtime="20210412 02:23:24.648" starttime="20210412 02:23:24.559"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:49.474" starttime="20210411 11:27:49.239"></status>
+<status status="PASS" endtime="20210412 02:23:24.648" starttime="20210412 02:23:24.444"></status>
 </kw>
 <kw name="Select Status" library="CreateNewContractPage">
 <arguments>
@@ -837,7 +848,7 @@
 <arguments>
 <arg>${CONTRACT_STATUS_INPUT1}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:49.549" starttime="20210411 11:27:49.474"></status>
+<status status="PASS" endtime="20210412 02:23:24.701" starttime="20210412 02:23:24.649"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -855,12 +866,12 @@
 <arguments>
 <arg>${CONTRACT_STATUS_INPUT2}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:49.551" level="INFO">Clicking element 'xpath=//input[@value='Signed']/..'.</msg>
-<status status="PASS" endtime="20210411 11:27:49.694" starttime="20210411 11:27:49.550"></status>
+<msg timestamp="20210412 02:23:24.703" level="INFO">Clicking element 'xpath=//input[@value='Signed']/..'.</msg>
+<status status="PASS" endtime="20210412 02:23:24.894" starttime="20210412 02:23:24.702"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:49.694" starttime="20210411 11:27:49.549"></status>
+<status status="PASS" endtime="20210412 02:23:24.894" starttime="20210412 02:23:24.702"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:49.694" starttime="20210411 11:27:49.474"></status>
+<status status="PASS" endtime="20210412 02:23:24.895" starttime="20210412 02:23:24.649"></status>
 </kw>
 <kw name="Click Done" library="CreateNewContractPage">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
@@ -869,33 +880,33 @@
 <arg>Done</arg>
 <arg>timeout=30s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:49.720" starttime="20210411 11:27:49.695"></status>
+<status status="PASS" endtime="20210412 02:23:24.931" starttime="20210412 02:23:24.895"></status>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:49.758" starttime="20210411 11:27:49.720"></status>
+<status status="PASS" endtime="20210412 02:23:24.976" starttime="20210412 02:23:24.931"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:50.104" starttime="20210411 11:27:49.758"></status>
+<status status="PASS" endtime="20210412 02:23:25.304" starttime="20210412 02:23:24.977"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${DONE_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:50.104" level="INFO">Clicking element 'xpath=//div[@id="CreateNew_nextBtn"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:50.237" starttime="20210411 11:27:50.104"></status>
+<msg timestamp="20210412 02:23:25.305" level="INFO">Clicking element 'xpath=//div[@id="CreateNew_nextBtn"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:25.468" starttime="20210412 02:23:25.305"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:50.237" starttime="20210411 11:27:49.694"></status>
+<status status="PASS" endtime="20210412 02:23:25.469" starttime="20210412 02:23:24.895"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:50.237" starttime="20210411 11:27:48.686"></status>
+<status status="PASS" endtime="20210412 02:23:25.469" starttime="20210412 02:23:24.014"></status>
 </kw>
 <kw name="Verify Error Pop Up" library="VlocityApp">
 <kw name="Handle Error Pop Up" library="CreateNewContractPage">
@@ -905,7 +916,7 @@
 <arg>${ERROR_POPUP_HEADER}</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:51.132" starttime="20210411 11:27:50.239"></status>
+<status status="PASS" endtime="20210412 02:23:26.446" starttime="20210412 02:23:25.485"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -913,23 +924,23 @@
 <arg>${ERROR_POPUP_HEADER}</arg>
 <arg>Error</arg>
 </arguments>
-<msg timestamp="20210411 11:27:51.133" level="INFO">Verifying element 'xpath=//div[@id="alert-container"]//h2[text()='Error']' contains exact text 'Error'.</msg>
-<status status="PASS" endtime="20210411 11:27:51.165" starttime="20210411 11:27:51.132"></status>
+<msg timestamp="20210412 02:23:26.447" level="INFO">Verifying element 'xpath=//div[@id="alert-container"]//h2[text()='Error']' contains exact text 'Error'.</msg>
+<status status="PASS" endtime="20210412 02:23:26.532" starttime="20210412 02:23:26.447"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${ERROR_POPUP_OK_BUTTON}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:51.165" level="INFO">Clicking element 'xpath=//button[@id='alert-ok-button']'.</msg>
-<status status="PASS" endtime="20210411 11:27:51.286" starttime="20210411 11:27:51.165"></status>
+<msg timestamp="20210412 02:23:26.532" level="INFO">Clicking element 'xpath=//button[@id='alert-ok-button']'.</msg>
+<status status="PASS" endtime="20210412 02:23:26.650" starttime="20210412 02:23:26.532"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:51.286" starttime="20210411 11:27:50.238"></status>
+<status status="PASS" endtime="20210412 02:23:26.650" starttime="20210412 02:23:25.484"></status>
 </kw>
 <kw name="Verify Error Message" library="CreateNewContractPage">
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" endtime="20210411 11:27:51.290" starttime="20210411 11:27:51.287"></status>
+<status status="PASS" endtime="20210412 02:23:26.659" starttime="20210412 02:23:26.651"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -937,15 +948,15 @@
 <arg>${IFRAME1}</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:51.312" starttime="20210411 11:27:51.290"></status>
+<status status="PASS" endtime="20210412 02:23:26.671" starttime="20210412 02:23:26.660"></status>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>${IFRAME1}</arg>
 </arguments>
-<msg timestamp="20210411 11:27:51.313" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
-<status status="PASS" endtime="20210411 11:27:51.337" starttime="20210411 11:27:51.313"></status>
+<msg timestamp="20210412 02:23:26.672" level="INFO">Selecting frame 'xpath=//iframe[@id="iFrameResizer1"]'.</msg>
+<status status="PASS" endtime="20210412 02:23:26.701" starttime="20210412 02:23:26.671"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -953,7 +964,7 @@
 <arg>${ERROR_MESSAGE_LOCATION}</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:51.384" starttime="20210411 11:27:51.337"></status>
+<status status="PASS" endtime="20210412 02:23:26.717" starttime="20210412 02:23:26.701"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -961,8 +972,8 @@
 <arg>${ERROR_MESSAGE_LOCATION}</arg>
 <arg>Choose a valid contract status and save your changes. Ask your admin for details.</arg>
 </arguments>
-<msg timestamp="20210411 11:27:51.400" level="INFO">Verifying element 'xpath=//div[@class='error']/small' contains exact text 'Choose a valid contract status and save your changes. Ask your admin for details.'.</msg>
-<status status="PASS" endtime="20210411 11:27:51.415" starttime="20210411 11:27:51.400"></status>
+<msg timestamp="20210412 02:23:26.717" level="INFO">Verifying element 'xpath=//div[@class='error']/small' contains exact text 'Choose a valid contract status and save your changes. Ask your admin for details.'.</msg>
+<status status="PASS" endtime="20210412 02:23:26.743" starttime="20210412 02:23:26.717"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -972,21 +983,19 @@
 <assign>
 <var>${ErrorMessage}</var>
 </assign>
-<msg timestamp="20210411 11:27:51.457" level="INFO">${ErrorMessage} = Choose a valid contract status and save your changes. Ask your admin for details.</msg>
-<status status="PASS" endtime="20210411 11:27:51.457" starttime="20210411 11:27:51.415"></status>
+<msg timestamp="20210412 02:23:26.762" level="INFO">${ErrorMessage} = Choose a valid contract status and save your changes. Ask your admin for details.</msg>
+<status status="PASS" endtime="20210412 02:23:26.762" starttime="20210412 02:23:26.743"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${ErrorMessage}</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:51.458" starttime="20210411 11:27:51.457"></status>
+<status status="PASS" endtime="20210412 02:23:26.764" starttime="20210412 02:23:26.762"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:51.459" starttime="20210411 11:27:51.286"></status>
+<status status="PASS" endtime="20210412 02:23:26.764" starttime="20210412 02:23:26.650"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:51.459" starttime="20210411 11:27:50.238"></status>
-</kw>
-<status status="PASS" endtime="20210411 11:27:51.459" starttime="20210411 11:26:39.664"></status>
+<status status="PASS" endtime="20210412 02:23:26.764" starttime="20210412 02:23:25.484"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="common">
 <kw name="Log To Console" library="BuiltIn">
@@ -994,18 +1003,21 @@
 <arguments>
 <arg>-- Closing Browser ...</arg>
 </arguments>
-<status status="PASS" endtime="20210411 11:27:51.461" starttime="20210411 11:27:51.460"></status>
+<status status="PASS" endtime="20210412 02:23:26.768" starttime="20210412 02:23:26.765"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20210411 11:27:56.392" starttime="20210411 11:27:51.461"></status>
+<status status="PASS" endtime="20210412 02:23:34.551" starttime="20210412 02:23:26.768"></status>
 </kw>
-<status status="PASS" endtime="20210411 11:27:56.392" starttime="20210411 11:27:51.460"></status>
+<status status="PASS" endtime="20210412 02:23:34.552" starttime="20210412 02:23:26.765"></status>
 </kw>
 <doc>This Test attempts to verify Error Message While submitting Invalid Details in Contract Form.</doc>
-<status status="PASS" endtime="20210411 11:27:56.392" critical="yes" starttime="20210411 11:26:09.340"></status>
+<status status="PASS" endtime="20210412 02:23:34.552" critical="yes" starttime="20210412 02:21:20.270"></status>
 </test>
-<status status="PASS" endtime="20210411 11:27:56.392" starttime="20210411 11:24:07.933"></status>
+<doc>Error Validation</doc>
+<status status="PASS" endtime="20210412 02:23:34.555" starttime="20210412 02:21:20.248"></status>
+</suite>
+<status status="PASS" endtime="20210412 02:23:34.558" starttime="20210412 02:18:48.640"></status>
 </suite>
 <statistics>
 <total>
@@ -1015,7 +1027,9 @@
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="ContractCreationValidation" pass="2">ContractCreationValidation</stat>
+<stat fail="0" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="0" id="s1-s1" name="ContractCreationValidation" pass="1">Tests.ContractCreationValidation</stat>
+<stat fail="0" id="s1-s2" name="ErrorValidation" pass="1">Tests.ErrorValidation</stat>
 </suite>
 </statistics>
 <errors>

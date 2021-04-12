@@ -2,27 +2,6 @@
 Resource    ../Resources/import.robot
 
 *** Keywords ***
-Contract Creation and Validation
-    [Arguments]  ${USER_CREDENTIALS}  ${ACCOUNT_NAME}  ${CONTRACT_NAME}  ${CONTRACT_TERM1}  ${CONTRACT_STATUS1}
-    Login To Salesforce  ${USER_CREDENTIALS}
-    Navigate To Account
-    Click On Renew Contract
-    Verify Create New Contract Page is Loaded
-    Fill In Contract Details and submit form  ${CONTRACT_NAME}  ${CONTRACT_TERM1}  ${CONTRACT_STATUS1}
-    Validate Contract Details  ${ACCOUNT_NAME}  ${CONTRACT_TERM1}  ${CONTRACT_STATUS1}
-    Get Screenshot
-#    Delete Created Contract
-
-
-Error Validation On Selecting Invalid Details
-    [Arguments]  ${USER_CREDENTIALS}  ${ACCOUNT_NAME}  ${CONTRACT_NAME}  ${CONTRACT_TERM2}  ${CONTRACT_STATUS2}
-    Login To Salesforce  ${USER_CREDENTIALS}
-    Navigate To Account
-    Click On Renew Contract
-    Verify Create New Contract Page is Loaded
-    Fill In Contract Details and submit form  ${CONTRACT_NAME}  ${CONTRACT_TERM2}  ${CONTRACT_STATUS2}
-    Verify Error Pop Up
-
 
 Login To Salesforce
     [Arguments]  ${USER_CREDENTIALS}

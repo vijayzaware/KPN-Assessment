@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource  ../../Resources/import.robot
+Resource  ../Resources/import.robot
 
 
 
